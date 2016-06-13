@@ -36,7 +36,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void TestUpload(){
-        //adajdfffdjfjfjaddldslasdlksad
         //ey b0ss cen i habe pussi pls
         //yeayeayea
         //hey helllaldosaoodo
