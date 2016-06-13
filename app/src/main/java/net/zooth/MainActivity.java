@@ -36,7 +36,6 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void TestUpload(){
-        int a = 1+1;
-        int b = 2+2;
+        //ey b0ss cen i habe pussi pls
     }
 }
