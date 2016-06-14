@@ -35,9 +35,5 @@ public class MainActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-    private void TestUpload(){
-        //ey b0ss cen i habe pussi pls
-        //yeayeayea
-        //fjfjaxkakdsldkaklcusadsda
-    }
+
 }
