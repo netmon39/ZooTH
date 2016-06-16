@@ -3,11 +3,11 @@ package net.zooth;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 
-public class CameraView extends AppCompatActivity {
+public class ChooseOrganization extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_camera_view);
+        setContentView(R.layout.activity_choose_organization);
     }
 }
