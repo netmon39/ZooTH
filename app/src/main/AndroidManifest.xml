@@ -25,6 +25,18 @@
         </activity>
         <activity android:name=".ChooseOrganization" >
         </activity>
+        <activity android:name=".Organization" >
+        </activity>
+        <activity android:name=".ChooseZoo" >
+        </activity>
+        <activity android:name=".Zoo" >
+        </activity>
+        <activity android:name=".ZooMenuTab" >
+        </activity>
+        <activity android:name=".ZooCamera" >
+        </activity>
+        <activity android:name=".ZooMap" >
+        </activity>
     </application>
 
 </manifest>

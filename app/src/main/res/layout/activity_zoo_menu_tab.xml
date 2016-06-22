@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:weightSum="20"
+    android:background="#000000">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="0.5">
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/menu_layout_button_home"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="   Home"
+            android:gravity="left"
+            android:background="#000000"
+            android:textColor="#ffffff"
+            android:contextClickable="true"
+            android:textSize="30dp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/menu_layout_button_about"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="   About"
+            android:gravity="left"
+            android:background="#000000"
+            android:textSize="30dp"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/menu_layout_button_graph"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="   Graph"
+            android:layout_gravity="center"
+            android:gravity="left"
+            android:background="#000000"
+            android:textSize="30dp"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+
+</LinearLayout>
