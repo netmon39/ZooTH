@@ -14,7 +14,7 @@ public class ChooseZoo extends AppCompatActivity implements View.OnClickListener
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_choose_zoo);
 
-        zoo1 = (Button) findViewById(R.id.button);
+        zoo1 = (Button) findViewById(R.id.zoo1);
         zoo1.setOnClickListener(this);
 
     }
@@ -22,7 +22,7 @@ public class ChooseZoo extends AppCompatActivity implements View.OnClickListener
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
-            case R.id.button:
+            case R.id.zoo1:
                 Intent intent = new Intent(this, Zoo.class);
                 startActivity(intent);
                 break;
