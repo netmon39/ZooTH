@@ -48,6 +48,11 @@ public class ZooMap extends Fragment {
             }
         });
 
+        //MAP// Work with TouchImageView API here
+        TouchImageView olo = (TouchImageView) view.findViewById(R.id.map);
+        olo.setImageResource(R.drawable.dice);//select map image here
+        olo.setMaxZoom(20);
+
         return view;
     }
 
