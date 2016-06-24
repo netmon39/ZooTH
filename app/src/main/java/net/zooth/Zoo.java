@@ -56,26 +56,37 @@ public class Zoo extends FragmentActivity implements ZooMap.OnSettingClickListen
 
 
     @Override
-    public void onHomeClicked() {
+    public void onInformationClicked() {
 
         closeMenu();
-      /*  Intent intent = new Intent(this, DisplayIncome.class);
-        startActivity(intent);*/
+        Intent intent = new Intent(this, Information.class);
+        startActivity(intent);
     }
 
     @Override
-    public void onAboutClicked() {
+    public void onActivityClicked() {
 
         closeMenu();
-      /*  Intent intent = new Intent(this, About.class);
-        startActivity(intent);*/
+        Intent intent = new Intent(this, Activity.class);
+        startActivity(intent);
 
 
     }
 
     @Override
-    public void onGraphClicked() {
+    public void onTravelClicked() {
 
         closeMenu();
+        Intent intent = new Intent(this, Travel.class);
+        startActivity(intent);
     }
+
+    @Override
+    public void onContactClicked() {
+
+        closeMenu();
+        Intent intent = new Intent(this, Contact.class);
+        startActivity(intent);
+    }
+
 }

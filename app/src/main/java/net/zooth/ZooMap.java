@@ -18,9 +18,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
-/**
- * Created by kenz_kola on 11/3/2015 AD.
- */
+
 public class ZooMap extends Fragment {
 
     private OnSettingClickListener mOnSettingClickListener;

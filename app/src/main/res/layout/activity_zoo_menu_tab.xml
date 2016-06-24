@@ -20,10 +20,10 @@
         android:layout_weight="1">
 
         <Button
-            android:id="@+id/menu_layout_button_home"
+            android:id="@+id/menu_layout_button_information"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="   MAP"
+            android:text="   แผนที่"
             android:gravity="left"
             android:background="#0c6947"
             android:textColor="#ffffff"
@@ -38,10 +38,10 @@
         android:layout_weight="1">
 
         <Button
-            android:id="@+id/menu_layout_button_about"
+            android:id="@+id/menu_layout_button_activity"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="   About"
+            android:text="   ข้อมูลสวนสัตว์"
             android:gravity="left"
             android:background="#0c6947"
             android:textSize="30dp"
@@ -55,15 +55,52 @@
         android:layout_weight="1">
 
         <Button
-            android:id="@+id/menu_layout_button_graph"
+            android:id="@+id/menu_layout_button_travel"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="   Graph"
+            android:text="   กิจกรรมที่น่าสนใจ"
             android:layout_gravity="center"
             android:gravity="left"
             android:background="#0c6947"
             android:textSize="30dp"
             android:textColor="#ffffff" />
     </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/menu_layout_button_location"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="   การเดินทาง"
+            android:layout_gravity="center"
+            android:gravity="left"
+            android:background="#0c6947"
+            android:textSize="30dp"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <Button
+            android:id="@+id/menu_layout_button_contact"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="   ติดต่อ"
+            android:layout_gravity="center"
+            android:gravity="left"
+            android:background="#0c6947"
+            android:textSize="30dp"
+            android:textColor="#ffffff" />
+    </LinearLayout>
+
 
 </LinearLayout>

@@ -11,7 +11,7 @@ import android.widget.Button;
 
 public class ZooMenuTab extends Fragment implements View.OnClickListener {
 
-    private Button homeBtn, aboutBtn, graphBtn;
+    private Button information, activity, travel, contact;
     private OnMenuClickListener myOnMenuClickListener;
 
     @Nullable
@@ -19,13 +19,15 @@ public class ZooMenuTab extends Fragment implements View.OnClickListener {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View v = inflater.inflate(R.layout.activity_zoo_menu_tab,container,false);
 
-        homeBtn = (Button) v.findViewById(R.id.menu_layout_button_home);
-        aboutBtn = (Button) v.findViewById(R.id.menu_layout_button_about);
-        graphBtn = (Button) v.findViewById(R.id.menu_layout_button_graph);
+        information = (Button) v.findViewById(R.id.menu_layout_button_information);
+        activity = (Button) v.findViewById(R.id.menu_layout_button_activity);
+        travel = (Button) v.findViewById(R.id.menu_layout_button_travel);
+        contact = (Button) v.findViewById(R.id.menu_layout_button_contact);
 
-        homeBtn.setOnClickListener(this);
-        aboutBtn.setOnClickListener(this);
-        graphBtn.setOnClickListener(this);
+        information.setOnClickListener(this);
+        activity.setOnClickListener(this);
+        travel.setOnClickListener(this);
+        contact.setOnClickListener(this);
         return v;
     }
 
@@ -36,21 +38,22 @@ public class ZooMenuTab extends Fragment implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         if(myOnMenuClickListener != null){
-            if(v.equals(homeBtn))
-                myOnMenuClickListener.onHomeClicked();
-            else if(v.equals(aboutBtn))
-                myOnMenuClickListener.onAboutClicked();
-            else  if(v.equals(graphBtn))
-                myOnMenuClickListener.onGraphClicked();
+            if(v.equals(information))
+                myOnMenuClickListener.onInformationClicked();
+            else if(v.equals(activity))
+                myOnMenuClickListener.onActivityClicked();
+            else  if(v.equals(travel))
+                myOnMenuClickListener.onTravelClicked();
+            else  if(v.equals(contact))
+                myOnMenuClickListener.onContactClicked();
         }
     }
 
     public interface OnMenuClickListener{
-        public void onHomeClicked();
-        public void onAboutClicked();
-        public void onGraphClicked();
+        public void onInformationClicked();
+        public void onActivityClicked();
+        public void onTravelClicked();
+        public void onContactClicked();
     }
-
-
 
 }
