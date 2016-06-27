@@ -1,6 +1,9 @@
 package net.zooth;
 
 import android.content.ContentResolver;
+import android.content.Context;
+import android.database.Cursor;
+import android.graphics.BitmapFactory;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Matrix;
@@ -9,6 +12,7 @@ import android.graphics.Rect;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.hardware.Camera;
+import android.media.ExifInterface;
 import android.media.MediaScannerConnection;
 import android.net.Uri;
 import android.os.Bundle;
@@ -41,6 +45,7 @@ public class ZooCamera extends Activity implements View.OnClickListener{
     private Uri imageUri;
     public boolean saveboo=false;
     public Bitmap bittt=null;
+    public Drawable myDrawable=null;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,7 +76,7 @@ public class ZooCamera extends Activity implements View.OnClickListener{
 
     public void callUpCamera(){
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        File photo = new File(Environment.getExternalStorageDirectory() + "/ZooTH/temp/.nomedia",  "temp.jpg");//HTC/Internal Storage/Pic..jpg
+        File photo = new File(Environment.getExternalStorageDirectory() + "/ZooTH/temp/.nomedia",  "temp.jpg");//HTC/Internal Storage/Pic..jpg /.nomedia
         intent.putExtra(MediaStore.EXTRA_OUTPUT,//SAVE***
                 Uri.fromFile(photo));
         imageUri = Uri.fromFile(photo);
@@ -119,6 +124,38 @@ public class ZooCamera extends Activity implements View.OnClickListener{
         }
     }
 
+    public static int getCameraPhotoOrientation(Context context, Uri imageUri, String imagePath){
+        int rotate = 0;
+        try {
+            context.getContentResolver().notifyChange(imageUri, null);
+            File imageFile = new File(imagePath);
+            ExifInterface exif = new ExifInterface(
+                    imageFile.getAbsolutePath());
+            int orientation = exif.getAttributeInt(
+                    ExifInterface.TAG_ORIENTATION,
+                    ExifInterface.ORIENTATION_NORMAL);
+
+            switch (orientation) {
+                case ExifInterface.ORIENTATION_ROTATE_270:
+                    rotate = 270;
+                    break;
+                case ExifInterface.ORIENTATION_ROTATE_180:
+                    rotate = 180;
+                    break;
+                case ExifInterface.ORIENTATION_ROTATE_90:
+                    rotate = 90;
+                    break;
+            }
+
+
+           // Log.v(TAG, "Exif orientation: " + orientation);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        return rotate;
+    }
+
+
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         // TODO Auto-generated method stub
@@ -135,6 +172,7 @@ public class ZooCamera extends Activity implements View.OnClickListener{
             Toast.makeText(getApplicationContext(), "Photo not taken!", Toast.LENGTH_LONG).show();
         }}*/
 
+
         switch (requestCode) {
             case TAKE_PICTURE:
                 if (resultCode == RESULT_OK) {
@@ -150,7 +188,21 @@ public class ZooCamera extends Activity implements View.OnClickListener{
                     try {
                         bitmap = android.provider.MediaStore.Images.Media.getBitmap(cr, selectedImage);
 
-                        Drawable myDrawable = getResources().getDrawable(R.drawable.zooframe);//Frame name here
+                        String filePath = selectedImage.getPath();
+
+
+                        //***TEMPORARY PORTRAIT/LANDSCAPE FRAME SWITCH*** issue with EXIF
+                        int rotary = getCameraPhotoOrientation(this, selectedImage, selectedImage.getPath());
+                        switch(rotary){
+                            case(0):
+                                myDrawable = getResources().getDrawable(R.drawable.dice);//Always read EXIF as zero?? **PORTRAIT**
+                                break;
+                            case(-1):
+                                myDrawable = getResources().getDrawable(R.drawable.nsx);//**LANDSCAPE**
+                                break;
+                        }
+
+
                         Bitmap frame = ((BitmapDrawable) myDrawable).getBitmap();
 
                         bittt = overlayFrame(bitmap, frame);//Combine taken photo with preset frame

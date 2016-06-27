@@ -4,6 +4,7 @@ package net.zooth;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,7 +12,7 @@ import android.widget.Button;
 
 public class ZooMenuTab extends Fragment implements View.OnClickListener {
 
-    private Button information, activity, travel, contact;
+    private Button information, activity, travel, nav, contact;
     private OnMenuClickListener myOnMenuClickListener;
 
     @Nullable
@@ -23,11 +24,14 @@ public class ZooMenuTab extends Fragment implements View.OnClickListener {
         activity = (Button) v.findViewById(R.id.menu_layout_button_activity);
         travel = (Button) v.findViewById(R.id.menu_layout_button_travel);
         contact = (Button) v.findViewById(R.id.menu_layout_button_contact);
+        nav =(Button) v.findViewById(R.id.menu_layout_button_nav);
 
         information.setOnClickListener(this);
         activity.setOnClickListener(this);
         travel.setOnClickListener(this);
         contact.setOnClickListener(this);
+        nav.setOnClickListener(this);
+
         return v;
     }
 
@@ -46,6 +50,8 @@ public class ZooMenuTab extends Fragment implements View.OnClickListener {
                 myOnMenuClickListener.onTravelClicked();
             else  if(v.equals(contact))
                 myOnMenuClickListener.onContactClicked();
+            else if(v.equals(nav))
+                myOnMenuClickListener.onNavClicked();
         }
     }
 
@@ -54,6 +60,7 @@ public class ZooMenuTab extends Fragment implements View.OnClickListener {
         public void onActivityClicked();
         public void onTravelClicked();
         public void onContactClicked();
+        public void onNavClicked();
     }
 
 }
