@@ -28,7 +28,7 @@
             android:background="#0c6947"
             android:textColor="#ffffff"
             android:contextClickable="true"
-            android:textSize="30dp" />
+            android:textSize="30dp"/>
     </LinearLayout>
 
     <LinearLayout

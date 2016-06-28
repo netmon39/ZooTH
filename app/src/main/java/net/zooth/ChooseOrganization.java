@@ -22,6 +22,11 @@ public class ChooseOrganization extends AppCompatActivity implements View.OnClic
         zoo.setOnClickListener(this);
 
     }
+    @Override
+    public void onBackPressed() {
+        this.finishAffinity();
+    }
+
 
     @Override
     public void onClick(View v) {

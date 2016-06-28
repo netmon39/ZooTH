@@ -197,9 +197,9 @@ public class ZooCamera extends Activity implements View.OnClickListener{
                             case(0):
                                 myDrawable = getResources().getDrawable(R.drawable.dice);//Always read EXIF as zero?? **PORTRAIT**
                                 break;
-                           /* case(-1):
+                            case(-1):
                                 myDrawable = getResources().getDrawable(R.drawable.nsx);//**LANDSCAPE**
-                                break;*/
+                                break;
                         }
 
 
