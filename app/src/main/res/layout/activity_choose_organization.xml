@@ -13,9 +13,9 @@
         android:layout_height="wrap_content"
         android:text="organization"
         android:id="@+id/organization"
-        android:layout_marginTop="91dp"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
 
     <Button
         style="?android:attr/buttonStyleSmall"
@@ -24,8 +24,8 @@
         android:text="Zoo"
         android:id="@+id/zoo"
         android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="135dp" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
 
 
 </RelativeLayout>

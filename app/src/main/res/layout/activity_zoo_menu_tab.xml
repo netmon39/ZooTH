@@ -79,10 +79,10 @@
         android:layout_weight="1">
 
         <Button
-            android:id="@+id/menu_layout_button_contact"
+            android:id="@+id/menu_layout_button_history"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:text="   ติดต่อ"
+            android:text="   ประวัติสวนสัตว์"
             android:layout_gravity="center"
             android:gravity="left"
             android:background="#0c6947"
@@ -90,7 +90,7 @@
             android:textColor="#ffffff" />
     </LinearLayout>
 
-    <!--<LinearLayout
+    <LinearLayout
         android:orientation="horizontal"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
@@ -106,7 +106,7 @@
             android:background="#0c6947"
             android:textSize="30dp"
             android:textColor="#ffffff" />
-    </LinearLayout>-->
+    </LinearLayout>
 
 
 </LinearLayout>

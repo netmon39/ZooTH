@@ -22,13 +22,13 @@ public class ZooMenuTab extends Fragment implements View.OnClickListener {
 
         information = (Button) v.findViewById(R.id.menu_layout_button_information);
         activity = (Button) v.findViewById(R.id.menu_layout_button_activity);
-        //travel = (Button) v.findViewById(R.id.menu_layout_button_travel);
+        travel = (Button) v.findViewById(R.id.menu_layout_button_history);
         contact = (Button) v.findViewById(R.id.menu_layout_button_contact);
         nav =(Button) v.findViewById(R.id.menu_layout_button_nav);
 
         information.setOnClickListener(this);
         activity.setOnClickListener(this);
-        //travel.setOnClickListener(this);
+        travel.setOnClickListener(this);
         contact.setOnClickListener(this);
         nav.setOnClickListener(this);
 
@@ -46,8 +46,8 @@ public class ZooMenuTab extends Fragment implements View.OnClickListener {
                 myOnMenuClickListener.onInformationClicked();
             else if(v.equals(activity))
                 myOnMenuClickListener.onActivityClicked();
-            //else  if(v.equals(travel))
-               // myOnMenuClickListener.onTravelClicked();
+            else  if(v.equals(travel))
+                myOnMenuClickListener.onHistoryClicked();
             else  if(v.equals(contact))
                 myOnMenuClickListener.onContactClicked();
             else if(v.equals(nav))
@@ -58,7 +58,7 @@ public class ZooMenuTab extends Fragment implements View.OnClickListener {
     public interface OnMenuClickListener{
         public void onInformationClicked();
         public void onActivityClicked();
-        //public void onTravelClicked();
+        public void onHistoryClicked();
         public void onContactClicked();
         public void onNavClicked();
     }

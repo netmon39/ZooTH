@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context="net.zooth.History"
+    android:background="#0c6947">
+
+    <ImageView
+        android:layout_width="125dp"
+        android:layout_height="125dp"
+        android:id="@+id/zooimage"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scrollView3"
+        android:layout_below="@+id/zooimage"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text=" สวนสัตว์ดุสิต เดิมเรียก สวนดุสิต หรือ เขาดิวนา พระบาทสมเด็จพระจุลจอมเกลาเจ้าอยู่หัวรัชกาลที่ 5 ทรงพระกรุณาโปรดเกล้าฯ ให้สร้างขึ้นตั้งแต่ปี พ.ศ. 2438 หลังจากที่พระองค์ได้ทอดพระเนตรกิจการสวนพฤกษชาติของต่างประเทศ และพบว่าสวนพฤกษชาติเป็นสถานที่ที่ให้ความรู้ความเพลิดเพลินและเป็นที่พักผ่อนหย่อนใจของประชาชน จึงมีพระราชดำริให้จัดสร้างขึ้นในประเทศไทยบ้าง โดยโปรดเกล้าฯ ให้สร้างขึ้น ในพื้นที่ราบทางด้านทิศตะวันออกติดคลองเปรมประชากร (ถนนพระราม 5)ด้วยการขุดสระนำ้ใหญ่ ประกอบคูคลองระบายนำ้ และถนน แล้วนำดินขึ้นมาเป็นเนินเขาเกาะกลางนำ้เรียกว่า วนา รวมอาณาเขต ส่วนนี้ทรงโปรดเรียกว่า เขาดินวนา โดยในขั้นต้นพระองค์ให้สร้างขึ้นสำหรับ เป็นที่ประพาส ทรงพระเกษมสำราญส่วนประองค์ และข้าราชบริพารฝ่ายในก่อน ดังนั้นสวนดุสิต หรือ เขาดินวนา จึงเป็นส่วนหนึ่งในพระราชฐานพระราชวังดุสิต
+
+          ต่อมาในรัชสมัยพระบาทสมเด็จพระปกเกล้าเจ้าอยู่หัว รัชกาลที่ ๗ ทรงมีพระราชดำริที่จะทำนุบำรุงสวนแห่งนี้ให้กว้างขวาง และดีกว่าที่เป็นอยู่ และเปิดให้ประชาชนมาเที่ยวพักผ่อนหย่อนใจด้วย
+ในเวลานั้นพระองค์เจ้าทิพอาภาเป็นผู้สำเร็จราชการแทนพระองค์ ได้พระราชทานอนุมัติในนามของ พระบาทสมเด็จพระเจ้าอยู่หัวอานันทมหิดล รัชกาลที่ ๘ ให้เทศบาลนครกรุงเทพรับบริเวณสวนดุสิต หรือ เขาดินวนามาจัดเป็นสวนสาธารณะได้
+"
+            android:id="@+id/textView4"
+            android:textColor="#ffffff"
+            android:textSize="16dp" />
+    </ScrollView>
+</RelativeLayout>
