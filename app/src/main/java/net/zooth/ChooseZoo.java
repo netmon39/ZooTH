@@ -6,7 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class ChooseZoo extends AppCompatActivity implements View.OnClickListener {
+public class ChooseZoo extends AppCompatActivity implements View.OnClickListener {//**************CONTROLS ALL SUBSEQUENT CONTENT*************
     private Button zoo1;
 
     @Override

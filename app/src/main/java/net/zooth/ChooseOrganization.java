@@ -24,6 +24,7 @@ public class ChooseOrganization extends AppCompatActivity implements View.OnClic
     }
     @Override
     public void onBackPressed() {
+        this.finishAffinity();
     }
 
 
