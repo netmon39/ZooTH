@@ -73,13 +73,13 @@ public class Zoo extends FragmentActivity implements ZooMap.OnSettingClickListen
 
     }
 
-    @Override
+    /*@Override
     public void onTravelClicked() {
 
         closeMenu();
         Intent intent = new Intent(this, Travel.class);
         startActivity(intent);
-    }
+    }*/
 
     @Override
     public void onContactClicked() {
