@@ -48,6 +48,12 @@
             android:textColor="#ffffff" />
     </LinearLayout>
 
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_weight="0.5"></FrameLayout>
+
     <LinearLayout
         android:orientation="horizontal"
         android:layout_width="fill_parent"

@@ -10,6 +10,7 @@ import android.support.v4.widget.DrawerLayout;
 public class Zoo extends FragmentActivity implements ZooMap.OnSettingClickListener, ZooMenuTab.OnMenuClickListener {
 
     private View menuView;
+    private int x;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +18,9 @@ public class Zoo extends FragmentActivity implements ZooMap.OnSettingClickListen
         setContentView(R.layout.activity_zoo);
 
         menuView = findViewById(R.id.activity_main_framelayout_menu);
+
+        Intent value = getIntent();
+        x = value.getIntExtra("zoo", 1);
 
         ZooMap zoomap = new ZooMap();
         ZooMenuTab zoomenutab = new ZooMenuTab();
@@ -57,9 +61,9 @@ public class Zoo extends FragmentActivity implements ZooMap.OnSettingClickListen
 
     @Override
     public void onInformationClicked() {
-
         closeMenu();
         Intent intent = new Intent(this, Information.class);
+
         startActivity(intent);
     }
 
@@ -78,6 +82,7 @@ public class Zoo extends FragmentActivity implements ZooMap.OnSettingClickListen
 
         closeMenu();
         Intent intent = new Intent(this, Travel.class);
+
         startActivity(intent);
     }*/
 
