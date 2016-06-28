@@ -195,10 +195,10 @@ public class ZooCamera extends Activity implements View.OnClickListener{
                         int rotary = getCameraPhotoOrientation(this, selectedImage, selectedImage.getPath());
                         switch(rotary){
                             case(0):
-                                myDrawable = getResources().getDrawable(R.drawable.dice);//Always read EXIF as zero?? **PORTRAIT**
+                                myDrawable = getResources().getDrawable(R.drawable.zooframe);//Always read EXIF as zero?? **PORTRAIT**
                                 break;
                             case(-1):
-                                myDrawable = getResources().getDrawable(R.drawable.nsx);//**LANDSCAPE**
+                                myDrawable = getResources().getDrawable(R.drawable.zooframe);//**LANDSCAPE**
                                 break;
                         }
 
