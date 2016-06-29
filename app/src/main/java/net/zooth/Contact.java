@@ -1,11 +1,13 @@
 package net.zooth;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
 public class Contact extends AppCompatActivity {
+
 
     private int y;
     private TextView add,tel,email,fb,web;
@@ -16,6 +18,8 @@ public class Contact extends AppCompatActivity {
 
         Intent value = getIntent();
         y = value.getIntExtra("zooname", 1);
+
+
 
         add = (TextView) findViewById(R.id.addresstext);
         tel = (TextView) findViewById(R.id.telephonetext);

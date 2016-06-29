@@ -70,7 +70,6 @@ public class ZooCamera extends Activity implements View.OnClickListener{
         String fname = "Image-"+ n +".jpg";
         File photo = new File (myDir, fname);//***
         if (photo.exists ()) photo.delete ();*/
-
         callUpCamera();
     }
 
@@ -188,19 +187,20 @@ public class ZooCamera extends Activity implements View.OnClickListener{
                     try {
                         bitmap = android.provider.MediaStore.Images.Media.getBitmap(cr, selectedImage);
 
-                        String filePath = selectedImage.getPath();
+                        //String filePath = selectedImage.getPath();
 
 
                         //***TEMPORARY PORTRAIT/LANDSCAPE FRAME SWITCH*** issue with EXIF
-                        int rotary = getCameraPhotoOrientation(this, selectedImage, selectedImage.getPath());
+                        /*int rotary = getCameraPhotoOrientation(this, selectedImage, selectedImage.getPath());
                         switch(rotary){
                             case(0):
                                 myDrawable = getResources().getDrawable(R.drawable.dice);//Always read EXIF as zero?? **PORTRAIT**
                                 break;
                             /*case(-1):
                                 myDrawable = getResources().getDrawable(R.drawable.nsx);//**LANDSCAPE**
-                                break;*/
-                        }
+                                break;
+                        }*/
+                        myDrawable = getResources().getDrawable(R.drawable.zooframe);//Always read EXIF as zero?? **PORTRAIT**
 
 
                         Bitmap frame = ((BitmapDrawable) myDrawable).getBitmap();
@@ -223,6 +223,7 @@ public class ZooCamera extends Activity implements View.OnClickListener{
 
                 }
             default:
+                setContentView(R.layout.activity_def);
                 Toast.makeText(getApplicationContext(), "No photo taken! Press Back.", Toast.LENGTH_SHORT).show();
                 break;
         }

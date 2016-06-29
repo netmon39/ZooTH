@@ -1,13 +1,15 @@
 package net.zooth;
 
+import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
 public class ChooseZoo extends AppCompatActivity implements View.OnClickListener {
-    private Button zoo1;
+    private Button zoo1, zoo2, zoo3, zoo4, zoo5, zoo6, zoo7, zoo8;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -16,6 +18,20 @@ public class ChooseZoo extends AppCompatActivity implements View.OnClickListener
 
         zoo1 = (Button) findViewById(R.id.zoo1);
         zoo1.setOnClickListener(this);
+        zoo2 = (Button) findViewById(R.id.zoo2);
+        zoo2.setOnClickListener(this);
+        zoo3 = (Button) findViewById(R.id.zoo3);
+        zoo3.setOnClickListener(this);
+        zoo4 = (Button) findViewById(R.id.zoo4);
+        zoo4.setOnClickListener(this);
+        zoo5 = (Button) findViewById(R.id.zoo5);
+        zoo5.setOnClickListener(this);
+        zoo6 = (Button) findViewById(R.id.zoo6);
+        zoo6.setOnClickListener(this);
+        zoo7 = (Button) findViewById(R.id.zoo7);
+        zoo7.setOnClickListener(this);
+        zoo8 = (Button) findViewById(R.id.zoo8);
+        zoo8.setOnClickListener(this);
 
     }
 

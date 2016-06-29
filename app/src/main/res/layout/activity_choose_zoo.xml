@@ -1,76 +1,178 @@
-<?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools" android:layout_width="wrap_content"
-    android:layout_height="wrap_content" android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
-    android:paddingBottom="@dimen/activity_vertical_margin" tools:context="net.zooth.ChooseZoo"
-    android:background="#0c6947">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/default_bg"
 
-    <Button
+    android:gravity="center"
+    android:orientation="horizontal"
+
+    android:id="@+id/yooo">
+
+    <ScrollView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Button"
-        android:id="@+id/zoo1"
+        android:layout_alignParentBottom="true"
         android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true"
-        />
+        android:layout_alignParentEnd="true"
+        android:gravity="center"
+        android:stretchColumns="*"
 
-    <Button
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:text="New Button"
-    android:id="@+id/zoo2"
-    android:layout_alignParentTop="true"
-    android:layout_alignParentEnd="true" />
 
-    <Button
+        android:layout_alignParentStart="true">
+        <TableLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            >
+            <TableRow
+                android:layout_weight="1"
+                android:paddingBottom="20dp"
+                android:gravity="center"
+                >
+
+                <Button  android:layout_width="fill_parent" android:layout_height="fill_parent"
+                    android:background="@drawable/dusitzoologo"
+                    android:id="@+id/zoo1"/>
+
+            </TableRow>
+            <TableRow
+                android:layout_weight="1"
+                android:paddingBottom="20dp"
+                android:gravity="center">
+                <Button  android:layout_width="fill_parent" android:layout_height="fill_parent"
+                    android:background="@drawable/khaokeaw"
+                    android:id="@+id/zoo2"/>
+
+            </TableRow>
+            <TableRow
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingBottom="20dp">
+                <Button  android:layout_width="fill_parent" android:layout_height="fill_parent"
+                    android:background="@drawable/chiangmai"
+                    android:id="@+id/zoo3"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingBottom="20dp">
+
+                <Button android:layout_width="fill_parent" android:layout_height="fill_parent"
+                    android:background="@drawable/korat"
+                    android:id="@+id/zoo4"/>
+            </TableRow>
+            <TableRow
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingBottom="20dp">
+                <Button android:layout_width="fill_parent" android:layout_height="fill_parent"
+                    android:background="@drawable/songkla"
+                    android:id="@+id/zoo5"/>
+            </TableRow>
+            <TableRow
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingBottom="20dp">
+                <Button android:layout_width="fill_parent" android:layout_height="fill_parent"
+                    android:background="@drawable/logo_ubonzoo"
+                    android:id="@+id/zoo6"/>
+            </TableRow>
+
+            <TableRow
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingBottom="20dp">
+                <Button android:layout_width="fill_parent" android:layout_height="fill_parent"
+                    android:background="@drawable/khonkaen"
+                    android:id="@+id/zoo7"/>
+            </TableRow>
+            <TableRow
+                android:layout_weight="1"
+                android:gravity="center"
+                android:paddingBottom="20dp">
+
+                <Button android:layout_width="fill_parent" android:layout_height="fill_parent"
+                    android:background="@drawable/surin"
+                    android:id="@+id/zoo8"/>
+                
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+</LinearLayout>
+    <!--<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin" tools:context="net.zooth.ChooseZoo"
+        android:background="#0c6947">
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Button"
+            android:id="@+id/zoo1"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true"
+            />
+
+        <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="New Button"
-        android:id="@+id/zoo3"
-        android:layout_marginTop="111dp"
-        android:layout_below="@+id/zoo1"
-        android:layout_alignParentStart="true" />
-
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Button"
-        android:id="@+id/zoo4"
-        android:layout_alignTop="@+id/zoo3"
+        android:id="@+id/zoo2"
+        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Button"
-        android:id="@+id/zoo5"
-        android:layout_above="@+id/zoo7"
-        android:layout_alignParentStart="true"
-        android:layout_marginBottom="113dp" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Button"
+            android:id="@+id/zoo3"
+            android:layout_marginTop="111dp"
+            android:layout_below="@+id/zoo1"
+            android:layout_alignParentStart="true" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Button"
-        android:id="@+id/zoo6"
-        android:layout_alignBottom="@+id/zoo5"
-        android:layout_alignParentEnd="true" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Button"
+            android:id="@+id/zoo4"
+            android:layout_alignTop="@+id/zoo3"
+            android:layout_alignParentEnd="true" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Button"
-        android:id="@+id/zoo7"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentStart="true" />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Button"
+            android:id="@+id/zoo5"
+            android:layout_above="@+id/zoo7"
+            android:layout_alignParentStart="true"
+            android:layout_marginBottom="113dp" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Button"
-        android:id="@+id/zoo8"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentEnd="true" />
-</RelativeLayout>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Button"
+            android:id="@+id/zoo6"
+            android:layout_alignBottom="@+id/zoo5"
+            android:layout_alignParentEnd="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Button"
+            android:id="@+id/zoo7"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentStart="true" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="New Button"
+            android:id="@+id/zoo8"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true" />
+    </RelativeLayout>-->

@@ -59,7 +59,7 @@ public class ZooMap extends Fragment {
     }
 
     public interface OnSettingClickListener{
-        public void onSettingClicked();
+        void onSettingClicked();
 
     }
 

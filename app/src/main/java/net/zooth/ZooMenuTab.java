@@ -56,11 +56,11 @@ public class ZooMenuTab extends Fragment implements View.OnClickListener {
     }
 
     public interface OnMenuClickListener{
-        public void onInformationClicked();
-        public void onActivityClicked();
-        public void onHistoryClicked();
-        public void onContactClicked();
-        public void onNavClicked();
+        void onInformationClicked();
+        void onActivityClicked();
+        void onHistoryClicked();
+        void onContactClicked();
+        void onNavClicked();
     }
 
 }
