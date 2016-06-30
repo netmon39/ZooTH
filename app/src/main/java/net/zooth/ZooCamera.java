@@ -46,7 +46,7 @@ public class ZooCamera extends Activity implements View.OnClickListener{
     public boolean saveboo=false;
     public Bitmap bittt=null;
     public Drawable myDrawable=null;
-
+    private int x;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -70,6 +70,9 @@ public class ZooCamera extends Activity implements View.OnClickListener{
         String fname = "Image-"+ n +".jpg";
         File photo = new File (myDir, fname);//***
         if (photo.exists ()) photo.delete ();*/
+        Intent value = getIntent();
+        x = value.getIntExtra("zooname", 1);
+
         callUpCamera();
     }
 
@@ -200,8 +203,32 @@ public class ZooCamera extends Activity implements View.OnClickListener{
                                 myDrawable = getResources().getDrawable(R.drawable.nsx);//**LANDSCAPE**
                                 break;
                         }*/
-                        myDrawable = getResources().getDrawable(R.drawable.zooframe);//Always read EXIF as zero?? **PORTRAIT**
 
+                        if(x==1){
+                            myDrawable = getResources().getDrawable(R.drawable.f1);
+
+                        }else  if(x==2){
+                            myDrawable = getResources().getDrawable(R.drawable.f2);
+
+                        }else  if(x==3){
+                            myDrawable = getResources().getDrawable(R.drawable.f3);
+
+                        }else  if(x==4){
+                            myDrawable = getResources().getDrawable(R.drawable.f4);
+
+                        }else  if(x==5){
+                            myDrawable = getResources().getDrawable(R.drawable.f5);
+
+                        }else  if(x==6){
+                            myDrawable = getResources().getDrawable(R.drawable.f6);
+
+                        }else  if(x==7){
+                            myDrawable = getResources().getDrawable(R.drawable.f7);
+
+                        }else  if(x==8){
+                            myDrawable = getResources().getDrawable(R.drawable.zooframe);
+
+                        }
 
                         Bitmap frame = ((BitmapDrawable) myDrawable).getBitmap();
 

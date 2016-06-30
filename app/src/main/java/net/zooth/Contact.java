@@ -20,8 +20,6 @@ public class Contact extends AppCompatActivity {
         Intent value = getIntent();
         y = value.getIntExtra("zooname", 1);
 
-
-
         add = (TextView) findViewById(R.id.addresstext);
         tel = (TextView) findViewById(R.id.telephonetext);
         email = (TextView) findViewById(R.id.emailtext);

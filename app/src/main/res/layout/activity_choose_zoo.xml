@@ -3,101 +3,80 @@
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     android:background="@drawable/default_bg"
-    android:gravity="center"
-    android:orientation="horizontal"
+
+    android:layout_gravity="center"
+
+    android:orientation="vertical"
 
     android:id="@+id/yooo">
 
-    <ScrollView
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="organization"
+        android:layout_gravity="center"
+        android:id="@+id/organization"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <HorizontalScrollView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
-        android:gravity="center"
-        android:stretchColumns="*"
+        android:gravity="center_horizontal"
+
 
 
         android:layout_alignParentStart="true">
-        <TableLayout
+        <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="fill_parent"
+            android:orientation="horizontal"
             >
-            <TableRow
-                android:layout_weight="1"
-                android:paddingBottom="20dp"
-                android:gravity="center"
-                >
 
                 <Button  android:layout_width="fill_parent" android:layout_height="fill_parent"
                     android:background="@drawable/dusitzoologo"
-                    android:id="@+id/zoo1"/>
+                    android:id="@+id/zoo1"
+                    android:layout_gravity="center"
+                    android:gravity="center"
 
-            </TableRow>
-            <TableRow
-                android:layout_weight="1"
-                android:paddingBottom="20dp"
-                android:gravity="center">
+                    />
+
                 <Button  android:layout_width="fill_parent" android:layout_height="fill_parent"
                     android:background="@drawable/khaokeaw"
                     android:id="@+id/zoo2"/>
 
-            </TableRow>
-            <TableRow
-                android:layout_weight="1"
-                android:gravity="center"
-                android:paddingBottom="20dp">
-                <Button  android:layout_width="fill_parent" android:layout_height="fill_parent"
-                    android:background="@drawable/chiangmai"
-                    android:id="@+id/zoo3"/>
-            </TableRow>
+            <Button  android:layout_width="fill_parent" android:layout_height="fill_parent"
+                android:background="@drawable/chiangmai"
+                android:id="@+id/zoo3"/>
 
-            <TableRow
-                android:layout_weight="1"
-                android:gravity="center"
-                android:paddingBottom="20dp">
 
-                <Button android:layout_width="fill_parent" android:layout_height="fill_parent"
-                    android:background="@drawable/korat"
-                    android:id="@+id/zoo4"/>
-            </TableRow>
-            <TableRow
-                android:layout_weight="1"
-                android:gravity="center"
-                android:paddingBottom="20dp">
-                <Button android:layout_width="fill_parent" android:layout_height="fill_parent"
-                    android:background="@drawable/songkla"
-                    android:id="@+id/zoo5"/>
-            </TableRow>
-            <TableRow
-                android:layout_weight="1"
-                android:gravity="center"
-                android:paddingBottom="20dp">
-                <Button android:layout_width="fill_parent" android:layout_height="fill_parent"
-                    android:background="@drawable/logo_ubonzoo"
-                    android:id="@+id/zoo6"/>
-            </TableRow>
+            <Button android:layout_width="fill_parent" android:layout_height="fill_parent"
+                android:background="@drawable/korat"
+                android:id="@+id/zoo4"/>
 
-            <TableRow
-                android:layout_weight="1"
-                android:gravity="center"
-                android:paddingBottom="20dp">
-                <Button android:layout_width="fill_parent" android:layout_height="fill_parent"
-                    android:background="@drawable/khonkaen"
-                    android:id="@+id/zoo7"/>
-            </TableRow>
-            <TableRow
-                android:layout_weight="1"
-                android:gravity="center"
-                android:paddingBottom="20dp">
 
-                <Button android:layout_width="fill_parent" android:layout_height="fill_parent"
-                    android:background="@drawable/surin"
-                    android:id="@+id/zoo8"/>
+            <Button android:layout_width="fill_parent" android:layout_height="fill_parent"
+                android:background="@drawable/songkla"
+                android:id="@+id/zoo5"/>
+            <Button android:layout_width="fill_parent" android:layout_height="fill_parent"
+                android:background="@drawable/logo_ubonzoo"
+                android:id="@+id/zoo6"/>
+
+            <Button android:layout_width="fill_parent" android:layout_height="fill_parent"
+                android:background="@drawable/khonkaen"
+                android:id="@+id/zoo7"/>
+
+
+            <Button android:layout_width="fill_parent" android:layout_height="fill_parent"
+                android:background="@drawable/surin"
+                android:id="@+id/zoo8"/>
                 
-            </TableRow>
-        </TableLayout>
-    </ScrollView>
+        </LinearLayout>
+    </HorizontalScrollView>
 </LinearLayout>
     <!--<?xml version="1.0" encoding="utf-8"?>
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"

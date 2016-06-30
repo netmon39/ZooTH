@@ -25,6 +25,13 @@ public class Zoo extends FragmentActivity implements ZooMap.OnSettingClickListen
         ZooMap zoomap = new ZooMap();
         ZooMenuTab zoomenutab = new ZooMenuTab();
 
+        if(x==1){
+            zoomap.ChangeZooName("สวนสัตว์ดุสิต");
+        }else if (x==2){
+            zoomap.ChangeZooName("สวนสัตว์เปิดเขาเขียว");
+        }else if (x==2){
+            zoomap.ChangeZooName("สวนสัตว์เปิดเขาเขียว");
+        }
 
         FragmentManager fragmentManager = getSupportFragmentManager();
 
@@ -39,7 +46,6 @@ public class Zoo extends FragmentActivity implements ZooMap.OnSettingClickListen
 
         zoomap.setOnSettingClickListener(this);
         zoomenutab.setOnMenuClickListener(this);
-
 
     }
 
@@ -63,6 +69,7 @@ public class Zoo extends FragmentActivity implements ZooMap.OnSettingClickListen
     public void onInformationClicked() {
         closeMenu();
         Intent intent = new Intent(this, Information.class);
+        intent.putExtra("zooname",x);
         startActivity(intent);
     }
 

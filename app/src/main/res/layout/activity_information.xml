@@ -17,18 +17,14 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true" />
-    <ScrollView
+    <TextView
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="30dp"
         android:id="@+id/timetextscv"
         android:layout_below="@+id/time"
         android:layout_alignParentStart="true">
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:id="@+id/timetext"
-            android:background="@drawable/firstloadingpage"/>
-    </ScrollView>
+
+    </TextView>
 
     <TextView
         android:layout_width="wrap_content"
@@ -41,15 +37,17 @@
         android:layout_alignParentStart="true" />
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="200dp"
         android:id="@+id/ticketscv"
         android:layout_below="@+id/ticket"
-        android:layout_alignParentStart="true" >
+        android:layout_alignParentStart="true"
+        android:fillViewport="false">
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/tickettext" />
+            android:id="@+id/tickettext"
+            />
     </ScrollView>
 
     <TextView
@@ -63,7 +61,7 @@
         android:layout_alignParentStart="true" />
     <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="200dp"
         android:id="@+id/otherscv"
         android:layout_below="@+id/other"
         android:layout_alignParentStart="true" >
@@ -71,7 +69,8 @@
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:id="@+id/othertext" />
+            android:id="@+id/othertext"
+            />
     </ScrollView>
 
 

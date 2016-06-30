@@ -18,15 +18,20 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
 
+import static android.content.Intent.getIntent;
+
 
 public class ZooMap extends Fragment {
 
     private OnSettingClickListener mOnSettingClickListener;
-
+    private int x;
+    private TextView name;
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.activity_zoo_map, container, false);
+
+        name = (TextView) view.findViewById(R.id.branch);
 
         Button camera = (Button) view.findViewById(R.id.camera);
         camera.setOnClickListener(new View.OnClickListener() {
@@ -52,6 +57,9 @@ public class ZooMap extends Fragment {
         olo.setMaxZoom(20);
 
         return view;
+    }
+    public void ChangeZooName(String x){
+        name.setText(x);
     }
 
     public void setOnSettingClickListener(OnSettingClickListener pOnSettingClickListener) {
