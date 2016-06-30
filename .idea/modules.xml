@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/ZooTH.iml" filepath="$PROJECT_DIR$/ZooTH.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ZooTH_UPDATED.iml" filepath="$PROJECT_DIR$/ZooTH_UPDATED.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
